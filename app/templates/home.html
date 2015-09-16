@@ -20,8 +20,9 @@
   <ol>
 	{% for p in players.query.order_by('id') %}
 	<div class='row'>
-    
-      <div class="col-md-2"></div>
+      <div class="col-md-2">
+        <p><h2><li> </h2></li></p>
+      </div>
       <div class="col-md-4">
         <p><h2><li>{{p.name}}</h2></li></p>
       </div>
