@@ -1,2 +1,6 @@
 from app import app
-app.run(debug=True)
+from socket import gethostname
+
+if __name__ == '__main__':
+    if 'liveconsole' not in gethostname():
+        app.run(debug=True)

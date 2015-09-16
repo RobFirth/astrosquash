@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from app import app, db
 from .models import Player
+from socket import gethostname
 
 @app.route('/')
 def home():
@@ -8,5 +9,6 @@ def home():
 
 from app import models
  
-# if __name__ == '__main__':
-#   app.run(debug=True)
+if __name__ == '__main__':
+    if 'liveconsole' not in gethostname():
+        app.run(debug=True)
