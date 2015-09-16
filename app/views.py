@@ -1,9 +1,6 @@
 from flask import Flask, render_template
-from flask.ext.sqlalchemy import SQLAlchemy
+from app import app, db
 from .models import Player
-
-app = Flask(__name__)      
-db = SQLAlchemy(app)
 
 @app.route('/')
 def home():
