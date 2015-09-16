@@ -9,6 +9,7 @@
 	{% for p in players.query.order_by('id') %}
 	<div>
         {{p}}
+        <a href="{{p.photourl}}"></a>
 	</div>
 	{% endfor %}
 </div>
