@@ -4,7 +4,7 @@ from .models import Player
 
 @app.route('/')
 def home():
-  return render_template('home.html')
+  return render_template('home.html', players = Player)
 
 from app import models
  
