@@ -6,34 +6,34 @@
 <div>
 <div class="row"> 
   <div class='row wet-asphalt'>
-      <div class="col-md-1 col-sm-1"></div>
-      <div class="col-md-1 col-sm-1"><h2>Rank</h2></div>
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"><h2>Rank</h2></div>
+      <div class="col-md-3 col-sm-3 col-xs-3">
         <p><h2>Name</h2></p>
       </div>
-      <div class="col-md-3 col-sm-3"></div>
-      <div class="col-md-1 col-sm-1"><h3>Wins</h3></div>
-      <div class="col-md-1 col-sm-1"><h3>Losses</h3></div>
-      <div class="col-md-1 col-sm-1"><h3>Points</h3></div>
-      <div class="col-md-1 col-sm-1"></div>
+      <div class="col-md-3 col-sm-3 col-xs-3"></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"><h3>Wins</h3></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"><h3>Losses</h3></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"><h3>Points</h3></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"></div>
   </div>
   <ol>
 	{% for p in players.query.order_by('id') %}
 	<div class='row'>
-      <div class="col-md-1 col-sm-1"></div>
-      <div class="col-md-1 col-sm-1">
+      <div class="col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-md-1 col-sm-1 col-xs-1">
         <p><h2><li> </h2></li></p>
       </div>
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3 col-xs-3">
         <p><h2>{{p.name}}</h2></p>
       </div>
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-3 col-xs-3">
         <img class="img-responsive img-thumbnail img-rounded" src="{{p.photourl}}" width="100" alt="">
       </div>
-      <div class="col-md-1 col-sm-1"><h2>{{p.won}}</h2></div>
-      <div class="col-md-1 col-sm-1"><h2>{{p.lost}}</h2></div>
-      <div class="col-md-1 col-sm-1"><h2>{{p.won * 3}}</h2></div>
-      <div class="col-md-1 col-sm-1"></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"><h2>{{p.won}}</h2></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"><h2>{{p.lost}}</h2></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"><h2>{{p.won * 3}}</h2></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"></div>
 	</div>
 	{% endfor %}
   </ol>
