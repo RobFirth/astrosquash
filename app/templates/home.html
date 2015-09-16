@@ -4,6 +4,7 @@
   <div class="jumbo">
   </div>
 <div>
+<div class="row">
   <ol>
 	{% for p in players.query.order_by('id') %}
 	<div class='row'>
@@ -19,6 +20,7 @@
 	</div>
 	{% endfor %}
   </ol>
+</div>
 
   <table style="width:100%">
   <tr>
