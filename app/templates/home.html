@@ -1,15 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
   <div class="jumbo">
-    <h2>Welcome to the Flask app<h2>
-    <h3>This is the home page for the Flask app<h3>
-    	<h2>MORE CONTENT</h2>
+    <h1>Southampton Astro Squash Ladder</h1>
   </div>
 <div>
 	{% for p in players.query.order_by('id') %}
 	<div>
+    <ol>
+      <li>
         {{p}}
         <a href="{{p.photourl}}">{{p.photourl}}</a>
+      </li>
+    </ol>
 	</div>
 	{% endfor %}
 </div>
