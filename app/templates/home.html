@@ -21,13 +21,15 @@
     <td>name</td> 
     <td>img</td>
   </tr>
+  <ol>
   {% for p in players.query.order_by('id') %}
   <tr>
-    <td><li><li></td>
+    <td><li></li></td>
     <td>{{p.name}}</td>
     <td><img class="img-responsive img-thumbnail img-rounded" src="{{p.photourl}}" width="50" alt=""></td>
   </tr>
   {% endfor %}
+  <ol>
   </table>
 </div>
 {% endblock %}
