@@ -14,5 +14,20 @@
 	</div>
 	{% endfor %}
   </ol>
+
+  <table style="width:100%">
+  <tr>
+    <td>Rank</td>
+    <td>name</td> 
+    <td>img</td>
+  </tr>
+  {% for p in players.query.order_by('id') %}
+  <tr>
+    <td><li><li></td>
+    <td>{{p.name}}</td>
+    <td><img class="img-responsive img-thumbnail img-rounded" src="{{p.photourl}}" width="50" alt=""></td>
+  </tr>
+  {% endfor %}
+  </table>
 </div>
 {% endblock %}
