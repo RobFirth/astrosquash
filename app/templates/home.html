@@ -5,19 +5,32 @@
   </div>
 <div>
 <div class="row">
+  
+  <div class='row'>
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <p><h2>Name</h2></p>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"><h3>Wins</h3></div>
+      <div class="col-md-1"><h3>Losses</h3></div>
+      <div class="col-md-1"><h3>Points</h3></div>
+  </div>
+
   <ol>
 	{% for p in players.query.order_by('id') %}
 	<div class='row'>
     
       <div class="col-md-2"></div>
-      <div class="col-md-2"><h2><li></li></h2></div>
-      <div class="col-md-2">
-        <p><h2>{{p.name}}</h2></p>
+      <div class="col-md-4">
+        <p><h2><li>{{p.name}}</h2></li></p>
       </div>
       <div class="col-md-2">
         <img class="img-responsive img-thumbnail img-rounded" src="{{p.photourl}}" width="50" alt="">
       </div>
-      
+      <div class="col-md-1"><h2>{{p.won}}</h2></div>
+      <div class="col-md-1"><h2>{{p.lost}}</h2></div>
+      <div class="col-md-1"><h2>{{p.won * 3}}</h2></div>
 	</div>
 	{% endfor %}
   </ol>
