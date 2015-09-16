@@ -4,15 +4,15 @@
     <h1>Southampton Astro Squash Ladder</h1>
   </div>
 <div>
+  <ol>
 	{% for p in players.query.order_by('id') %}
 	<div>
-    <ol>
-      <li>
-        {{p}}
-        <a href="{{p.photourl}}">{{p.photourl}}</a>
-      </li>
-    </ol>
+    <li>
+      {{p}}
+      <a href="{{p.photourl}}">{{p.photourl}}</a>
+    </li>  
 	</div>
 	{% endfor %}
+  </ol>
 </div>
 {% endblock %}
