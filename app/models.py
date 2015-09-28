@@ -9,3 +9,11 @@ class Player(db.Model):
     photourl = db.Column(db.String(120), index=True, unique=True)
     def __repr__(self):
             return '<User %r>' % (self.name)
+
+class Fixtures(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    timestamp = db.Column(db.DateTime)
+    winner_id = db.Column(db.Integer, db.ForeignKey('Player.id'))
+    loser_id = db.Column(db.Integer, db.ForeignKey('Player.id'))
+    def __repr__(self):
+        return '<Fixture %r>' % (self.timestamp)

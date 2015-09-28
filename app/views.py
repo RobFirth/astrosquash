@@ -1,11 +1,11 @@
 from flask import Flask, render_template
 from app import app, db
-from .models import Player
+from .models import Player, Fixtures
 from socket import gethostname
 
 @app.route('/')
 def home():
-  return render_template('home.html', players = Player)
+    return render_template('home.html', players = Player, fixtures = Fixtures)
 
 from app import models
  
