@@ -17,9 +17,10 @@
   <ol>
 	{% for f in fixtures.query.order_by('timestamp desc') %}
 	<div class='row'>
-  <div class="col-md-1 col-sm-1 col-xs-1"></div>
-  <div class="col-md-1 col-sm-1 col-xs-1">{{f.winner.name}}</div>	</div>
-  <div class="col-md-1 col-sm-1 col-xs-1">{{f.loser.name}}</div> </div>
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-md-1 col-sm-1 col-xs-1"><h3>{{f.winner.name}}</h3></div>	</div>
+    <div class="col-md-1 col-sm-1 col-xs-1"><h3>{{f.loser.name}}</h3></div> </div>
+  </div>
 	{% endfor %}
   </ol>
 </div>
