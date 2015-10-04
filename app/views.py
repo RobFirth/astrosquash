@@ -5,11 +5,12 @@ from socket import gethostname
 
 @app.route('/')
 def home():
-    return render_template('home.html', players = Player, fixtures = Fixtures)
+    return render_template('home.html', players = Player, fixtures = Fixtures, , link = '/results')
 
 @app.route('/results')
 def results():
-    return render_template('results.html', players = Player, fixtures = Fixtures)
+
+    return render_template('results.html', players = Player, fixtures = Fixtures, link = '/')
 
 
 from app import models
