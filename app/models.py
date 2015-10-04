@@ -8,6 +8,8 @@ class Fixtures(db.Model):
     loser_id = db.Column(db.Integer, db.ForeignKey('Player.id'))
     winner = db.relationship('Player', backref='player_wins', foreign_keys = winner_id)
     loser = db.relationship('Player', backref='player_losses', foreign_keys = loser_id)
+    win_score = db.Column(db.Integer, index=True)
+    loss_score = db.Column(db.Integer, index=True)
     def __repr__(self):
         return '<Fixture %r>' % (self.timestamp)
 

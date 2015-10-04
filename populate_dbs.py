@@ -17,9 +17,9 @@ db.session.add(u4)
 
 db.session.commit()
 
-f = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner = models.Player.query.filter_by(name = 'Rob Firth').first(), loser = models.Player.query.filter_by(name = 'Chris Boon').first())
-f1 = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner = models.Player.query.filter_by(name = 'Aarran Shaw').first(), loser = models.Player.query.filter_by(name = 'Chris Frohmaier').first())
-f2 = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner = models.Player.query.filter_by(name = 'Mat Smith').first(), loser = models.Player.query.filter_by(name = 'Rob Firth').first())
+f = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner = models.Player.query.filter_by(name = 'Rob Firth').first(), loser = models.Player.query.filter_by(name = 'Chris Boon').first(), win_score = 3, loss_score = 2)
+f1 = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner = models.Player.query.filter_by(name = 'Aarran Shaw').first(), loser = models.Player.query.filter_by(name = 'Chris Frohmaier').first(), win_score = 4, loss_score = 1)
+f2 = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner = models.Player.query.filter_by(name = 'Mat Smith').first(), loser = models.Player.query.filter_by(name = 'Rob Firth').first(), win_score = 5, loss_score = 0)
 
 db.session.add(f)
 db.session.add(f1)
