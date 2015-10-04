@@ -34,6 +34,7 @@
       <div class="col-md-1 col-sm-1 col-xs-1"><h2>{{p.lost}}</h2></div>
       <div class="col-md-1 col-sm-1 col-xs-1"><h2>{{p.won * 3}}</h2></div>
       <div class="col-md-1 col-sm-1 col-xs-1"></div>
+      {% fixtures.query.all() %}
 	</div>
 	{% endfor %}
   </ol>
