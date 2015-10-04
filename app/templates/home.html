@@ -30,7 +30,7 @@
       <div class="col-md-3 col-sm-3 col-xs-3">
         <img class="img-responsive img-thumbnail img-rounded" src="{{p.photourl}}" width="100" alt="">
       </div>
-      <div class="col-md-1 col-sm-1 col-xs-1"><h2>{%for f in fixtures.query.filter((winner_id)=1).all()%}
+      <div class="col-md-1 col-sm-1 col-xs-1"><h2>{%for f in fixtures.query.filter_all(winner_id=1).all()%}
       {{f}}
 {% endfor %}
       </h2></div>
