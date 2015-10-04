@@ -1,0 +1,31 @@
+_HiStOrY_V2_
+sys.path.append('/Users/berto/astrosquash')
+import sys
+sys.path.append('/Users/berto/astrosquash')
+from app import db,models
+importreadline
+readline
+readline?
+f=models.Fixtures(timestamp=asctime(),winner_id='ChrisBoon',loser_id='RobFirth')
+f=models.Fixtures(timestamp=asctime(),winner_id='ChrisBoon',loser_id='RobFirth')
+fromtimeimportasktime
+fromtimeimportasctime
+f=models.Fixtures(timestamp=asctime(),winner_id='ChrisBoon',loser_id='RobFirth')
+history
+readline.print
+readline.print()
+readline()
+readline
+readline.write_history_file('~/astrosquash/history.dat')
+readline.write_history_file('/Users/berto/astrosquash/history.dat')
+
+import sys
+sys.path.append('/Users/berto/astrosquash')
+from app import db,models
+import datetime
+f = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner_id = 1)
+db.session.add(f)
+db.session.commit()
+
+f = models.Fixtures()
+history
