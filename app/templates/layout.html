@@ -8,10 +8,35 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
   <body class="pumkin">
+   <script language="JavaScript" type="text/javascript">
+              <!--
+              function sizeTbl(h) {
+
+              var tbl = document.getElementById('content_full');
+              tbl.style.display = h;
+              if(h=="block")
+              {
+              document.getElementById('portrait').style.display='none';
+              document.getElementById('down').style.display='none';
+              document.getElementById('up').style.display='block';
+              }
+              else
+              {
+              document.getElementById('portrait').style.display='block';
+              document.getElementById('up').style.display='none';
+              document.getElementById('down').style.display='block';
+              }
+              }
+              // -->
+              </script>
   <div class='midnight-blue'>
     <header>
       <div class="container" style="text-align:center">
         <h1 class="logo">Southampton Astro Squash Ladder</h1>
+        <div>
+          <a href="javascript:sizeTbl('block')"  class="btn btn-lg btn-default" id="down">Learn more</a>
+        LOREM IPSUM
+        </div>
       </div>
     </header> 
     <div class="container">
