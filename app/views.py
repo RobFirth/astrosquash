@@ -7,6 +7,11 @@ from socket import gethostname
 def home():
     return render_template('home.html', players = Player, fixtures = Fixtures)
 
+@app.route('/results')
+def results():
+    return render_template('results.html', players = Player, fixtures = Fixtures)
+
+
 from app import models
  
 if __name__ == '__main__':
