@@ -37,7 +37,8 @@
 	</div>
 	{% endfor %}
   {%for f in fixtures.query.all() %}
-      {{f.timestamp}}
+      <p>{{f.timestamp}}</p>
+      <p>{{f.winner_id}</p>
   {% endfor %}
   </ol>
 </div>
