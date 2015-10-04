@@ -16,3 +16,13 @@ db.session.add(u3)
 db.session.add(u4)
 
 db.session.commit()
+
+f = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner = models.Player.query.filter_by(name = 'Rob Firth').first(), loser = models.Player.query.filter_by(name = 'Chris Boon').first())
+f1 = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner = models.Player.query.filter_by(name = 'Aarran Shaw').first(), loser = models.Player.query.filter_by(name = 'Chris Frohmaier').first())
+f2 = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner = models.Player.query.filter_by(name = 'Mat Smith').first(), loser = models.Player.query.filter_by(name = 'Rob Firth').first())
+
+db.session.add(f)
+db.session.add(f1)
+db.session.add(f2)
+
+db.session.commit()
