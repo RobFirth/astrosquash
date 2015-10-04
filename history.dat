@@ -29,3 +29,73 @@ db.session.commit()
 
 f = models.Fixtures()
 history
+
+import sys
+sys.path.append('/Users/berto/astrosquash')
+from app import db,models
+import datetime
+f = models.Fixtures(timestamp = datetime.datetime.utcnow(), winner_id = 1)
+db.session.add(f)
+db.session.commit()
+models.Player.query.all()
+for i in models.Player.query.all():
+    print i, i.posts
+for i in models.Player.query.all():
+    print i, i.posts.winner_id
+ i =  models.Player.query.all()[0]
+i
+i.posts
+i.posts()
+i.posts.get
+i.posts.get()
+i.posts.get(?
+i.posts.get?
+i.posts.get(0)
+ i =  models.Player.query.all()
+i
+for x in i:
+    print x.name
+for x in i:
+    print x.won
+for x in i:
+    print x.lost
+for x in i:
+    print x.posts
+for x in i:
+    print x.posts.query.all()
+for x in i:
+    print x.posts.all
+    ()
+i[0].posts
+i[0].posts.all()
+(i[0].posts.all())
+(i[0].posts.all())[0]
+(i[0].posts.all()).timestamp
+(i[0].posts.all()).timestamp()
+(i[0].posts.all())
+x = i[0].posts.all()
+x
+x[0]
+x = x[0]
+x
+x.winner_id
+
+model.Fixtures.query.all()
+models.Fixtures.query.all()
+i
+models.Players.query.all()
+models.Player.query.all()
+for i in  models.Player.query.all():
+    print i
+for i in  models.Player.query.all():
+    print i.id
+for i in  models.Player.query.all():
+    print i.photo_url
+for i in  models.Player.query.all():
+    print i.photourl
+u = models.Player(played = 0, won = 0, lost = 0, name ='Mat Smith', photourl = '/static/images/mathew_smith_small.jpg')
+u
+db.session.add(u)
+db.session.commit()
+history
+
