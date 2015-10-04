@@ -15,7 +15,7 @@
       <div class="col-md-1 col-sm-1 col-xs-1"><h3>Points</h3></div>
   </div>
   <ol>
-	{% for f in fixture.query.order_by('timestamp desc') %}
+	{% for f in fixtures.query.order_by('timestamp desc') %}
 	<div class='row'>
       {{f.winner}}
 	</div>
