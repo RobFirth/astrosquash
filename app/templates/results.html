@@ -1,28 +1,26 @@
 {% extends "layout.html" %}
 {% block content %}
-
-<div class="row wet-asphalt" style="text-align:center"> 
-  <div class="col-md-1 col-sm-1 col-xs-1"></div>
-  <div class="col-md-2 col-sm-2 col-xs-2"><h3>Date</h3></div>
-  <div class="col-md-2 col-sm-2 col-xs-2"><h3>Winner</h3></div>
-  <div class="col-md-2 col-sm-2 col-xs-2"><h3>Final Score</h3></div>
-  <div class="col-md-2 col-sm-2 col-xs-2"><h3>Loser</h3></div>
-  <div class="col-md-2 col-sm-2 col-xs-2"></div>
-  <div class="col-md-1 col-sm-1 col-xs-1"></div>
-</div>
+<div class="row jumbo"> 
+  <div class="row wet-asphalt" style="text-align:center"> 
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    <div class="col-md-2 col-sm-2 col-xs-2"><h3>Date</h3></div>
+    <div class="col-md-2 col-sm-2 col-xs-2"><h3>Winner</h3></div>
+    <div class="col-md-2 col-sm-2 col-xs-2"><h3>Final Score</h3></div>
+    <div class="col-md-2 col-sm-2 col-xs-2"><h3>Loser</h3></div>
+    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+    <div class="col-md-1 col-sm-1 col-xs-1"></div>
+  </div>
 <ol>
 	{% for f in fixtures.query.order_by('timestamp desc') %}
-    <li>
-      <div class='row' style="text-align:center">
-        <div class="col-md-1 col-sm-1 col-xs-1"></div>
-        <div class="col-md-2 col-sm-2 col-xs-2"><h3>{{f.timestamp.date()}}</h3></div>
-        <div class="col-md-2 col-sm-2 col-xs-2"><h3>{{f.winner.name}}</h3></div>
-        <div class="col-md-2 col-sm-2 col-xs-2"><h3>{{f.win_score}}-{{f.loss_score}}</h3></div>
-        <div class="col-md-2 col-sm-2 col-xs-2"><h3>{{f.loser.name}}</h3></div>
-        <div class="col-md-2 col-sm-2 col-xs-2"></div>
-        <div class="col-md-1 col-sm-1 col-xs-1"></div>
-      </div>
-    </li>
+    <div class='row' style="text-align:center">
+      <div class="col-md-1 col-sm-1 col-xs-1"></div>
+      <div class="col-md-2 col-sm-2 col-xs-2"><h3>{{f.timestamp.date()}}</h3></div>
+      <div class="col-md-2 col-sm-2 col-xs-2"><h3>{{f.winner.name}}</h3></div>
+      <div class="col-md-2 col-sm-2 col-xs-2"><h3>{{f.win_score}}-{{f.loss_score}}</h3></div>
+      <div class="col-md-2 col-sm-2 col-xs-2"><h3>{{f.loser.name}}</h3></div>
+      <div class="col-md-2 col-sm-2 col-xs-2"></div>
+      <div class="col-md-1 col-sm-1 col-xs-1"></div>
+    </div>
 	{% endfor %}
   </ol>
 </div>
